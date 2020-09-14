@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Летающая трова)</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+	<audio src="music.mp3" autoplay="autoplay"></audio>
+	<style>
+		body {
+			background-color: #000;
+		}
+
+		.wrapper {
+			display: grid;
+			grid-template-columns: 33.3% 33.3% 33.3%;
+			margin-top: 20%;
+		}
+
+		button {
+			border-radius: 5px;
+			border-color: white;
+			border-style: solid;
+			border-width: 1px;
+			color: white;
+			font-family: 'Roboto', sans-serif;
+			font-size: 1em;
+			padding: 2%;
+			cursor: pointer;
+			background-color: black;
+		}
+
+		button:hover {
+			border-radius: 5px;
+			border-color: black;
+			transition: 0.3s;
+			color: black;
+			background-color: white;
+		}
+
+		.empty {
+			color: white;
+			font-family: "Roboto", sans-serif;
+			padding-left: 25%;
+		}
+
+		.empty__second {
+			color: white;
+			font-family: "Roboto", sans-serif;
+			padding-left: 25%;
+		}
+
+		.started {
+			background-image: url(bg.gif);
+		}
+	</style>
+
+	<script>
+		function start () {
+			var audio = new Audio();
+	  		audio.src = 'music.mp3';
+	  		audio.autoplay = true;
+	  		let perem = document.querySelector("body");
+	  		perem.classList.add("started");
+		}
+	</script>
+</head>
+<body>
+	<div class="wrapper">
+			<div class="empty">WARNING! CONTAINS FLASH IMAGES!</div>
+			<button onclick="start()">don't click me</button>
+			<div class="empty__second">WARNING! CONTAINS FLASH IMAGES!</div>
+	</div>
+</body>
+</html>
